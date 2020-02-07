@@ -842,3 +842,31 @@ caption {
 /**
  * Layout
  */
+
+ .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(150,200,224);
+  background: linear-gradient(90deg, rgba(150,200,224,1) 0%, rgba(130,164,220,1) 50%, rgba(26,112,226,1) 100%);
+}
+
+.logo-container {
+  width: 12%;
+}
+
+.logo {
+  width: 280px;
+  margin: 10px 20px;
+}
+
+nav {
+  width: 35%;
+}
+
+.inner-wrap{
+  padding: 30px;
+  background: #F8F8F8;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
