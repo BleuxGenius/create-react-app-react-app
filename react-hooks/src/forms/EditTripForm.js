@@ -1,7 +1,7 @@
 import React,{ useState, useEffect } from "react";
 
 
-const EditUserForm = props => {
+const EditTripForm = props => {
     useEffect(() => {
         setUser(props.currentUser)
     }, [props])
@@ -22,11 +22,13 @@ const EditUserForm = props => {
         props.updateUser(user.id, user)
       }}
     >
-      <label>Name</label>
+      <label>AirPort</label>
       <input type="text" name="name" value={user.AirLine} onChange={handleInputChange} />
-      <label>Username</label>
+      <label>AirLine</label>
       <input type="text" name="username" value={user.AirLine} onChange={handleInputChange} />
-      <button>Update user</button>
+      <label>Fight</label>
+      <input type="text" name="username" value={user.Flight} onChange={handleInputChange} />
+      <button>Update Trip</button>
       <button onClick={() => props.setEditing(false)} className="button muted-button">
         Cancel
       </button>
@@ -34,4 +36,4 @@ const EditUserForm = props => {
     )
 }
 
-export default EditUserForm;
+export default EditTripForm;

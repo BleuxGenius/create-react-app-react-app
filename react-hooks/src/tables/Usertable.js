@@ -6,8 +6,8 @@ const Usertable = props => (
             <tr>
                 <th>AirPort</th>
                 <th>AirLine</th>
-                <th>flight</th>
-                <th>CarryonBags</th>
+                <th>Flight</th>
+                <th>Edit</th>
             </tr>
 </thead>
     <tbody>
@@ -16,9 +16,9 @@ const Usertable = props => (
             props.users.map(user => (
 // display the properties for users 
         <tr key ={user.id}>
-                <td>{user.name}</td>
-                <td> {user.username}</td>
-                <td> {user.flightstatus}</td>
+                <td>{user.AirPort}</td>
+                <td> {user.AirLine}</td>
+                <td> {user.Flight}</td>
                     <td>
                 <button onClick={()=> {props.editRow(user)}} className="button muted-button">Edit</button>
                 <button onClick={() => props.deleteuser(user.id)} className="buton muted-button">Delete</button>
