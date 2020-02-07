@@ -4,9 +4,10 @@ const Usertable = props => (
     <table>
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Username</th>
-                <th>Actions</th>
+                <th>AirPort</th>
+                <th>AirLine</th>
+                <th>flight</th>
+                <th>CarryonBags</th>
             </tr>
 </thead>
     <tbody>
@@ -17,17 +18,18 @@ const Usertable = props => (
         <tr key ={user.id}>
                 <td>{user.name}</td>
                 <td> {user.username}</td>
-                <td>
-                <button className="button muted-button">Edit</button>
-                <button className="buton muted-button">Delete</button>
+                <td> {user.flightstatus}</td>
+                    <td>
+                <button onClick={()=> {props.editRow(user)}} className="button muted-button">Edit</button>
+                <button onClick={() => props.deleteuser(user.id)} className="buton muted-button">Delete</button>
                 </td>
            </tr>
             ))
-            // creat if and statment if there are not any users 
+            // create if and statment if there are not any users 
         ):(
             <tr>
-                {/* display message  */}
-                <td colSpan={3}> No users</td>
+                
+                <td colSpan={4}> No users</td>
             </tr>
              )}
         </tbody>
